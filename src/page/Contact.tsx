@@ -34,7 +34,7 @@ const ContactMe: React.FC = () => {
 			<p className='text-lg mb-8 text-center'>
 				"Code is like humor. When you have to explain it, it's bad."
 			</p>
-			<div className='flex items-center justify-center gap-4'>
+			<div className='flex md:flex-col lg:flex-row items-center justify-center gap-4'>
 				{socials.map((social) => (
 					<a
 						key={social.name}

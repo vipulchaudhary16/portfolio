@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
@@ -9,11 +9,13 @@ import { FaCode } from 'react-icons/fa';
 import { ImOffice } from 'react-icons/im';
 import { MdOutlineWork } from 'react-icons/md';
 import { AiOutlineContacts } from 'react-icons/ai';
+import { useTheme } from '../context/theme.context';
 
 const { Sider } = Layout;
 
 const Sidebar: React.FC = () => {
-	const [current, setCurrent] = React.useState('about_me');
+	const [current, setCurrent] = useState('about_me');
+	const { collapsible, setCollapsible } = useTheme();
 	const location = useLocation();
 
 	const items = [
@@ -66,8 +68,6 @@ const Sidebar: React.FC = () => {
 
 	useEffect(() => {
 		const path = location.pathname.split('/')[1];
-		console.log(path);
-		console.log(location);
 		setCurrent(path === '' ? 'about_me' : path);
 	}, [location]);
 
@@ -82,12 +82,17 @@ const Sidebar: React.FC = () => {
 				left: 0,
 				background: BG_DARK_COLOR,
 			}}
+			collapsible
+			collapsed={collapsible}
+			onCollapse={(collapsible) => setCollapsible(collapsible)}
+			breakpoint='md'
+			collapsedWidth='80'
 		>
 			<div className='text-center p-4 bg-gray-800 text-red-400 text-lg font-bold'>
-				Vipul Chaudhary
+				{collapsible ? 'VC' : 'Vipul Chaudhary'}
 			</div>
 			<Menu
-				mode='inline'
+				mode='vertical'
 				className='bg-gray-900 h-full mt-4'
 				selectedKeys={[current]}
 				style={{ height: '100%', borderRight: 0 }}
@@ -98,13 +103,18 @@ const Sidebar: React.FC = () => {
 					label: <Link to={item.path}>{item.label}</Link>,
 				}))}
 			/>
-			<div className='absolute bottom-0 w-full p-4 flex justify-around bg-gray-800'>
+			<div
+				className={`absolute bottom-0 w-full p-4 flex ${
+					collapsible ? 'flex-col gap-4 justify-center items-center' : ''
+				} justify-around bg-gray-800`}
+			>
 				{quickSocialLinks.map(({ icon, link }) => (
 					<a
 						href={link}
 						target='_blank'
 						rel='noopener noreferrer'
 						style={{ color: '#ffffff' }}
+						key={link}
 					>
 						{icon}
 					</a>

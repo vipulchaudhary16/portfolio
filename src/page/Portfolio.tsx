@@ -6,11 +6,11 @@ const { Title } = Typography;
 
 const Portfolio = () => {
 	return (
-		<Flex className='p-8' vertical justify='center' align='center'>
+		<Flex className='md:p-4 lg:p-8' vertical justify='center' align='center'>
 			<Title level={2} className='heading-text'>
 				Projects
 			</Title>
-			<div className='p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+			<div className='px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 				{portfolioData.map((project) => (
 					<div
 						key={project.id}

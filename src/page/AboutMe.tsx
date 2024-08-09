@@ -8,7 +8,7 @@ const AboutMe: React.FC = () => {
 	return (
 		<>
 			<div className='flex flex-col items-center justify-center h-screen '>
-				<p className='text-center text-xl mb-6 mx-4 max-w-2xl'>
+				<p className={`text-center text-xl mb-6 mx-4 max-w-2xl`}>
 					"Vipul is a passionate software developer with a strong foundation in
 					full-stack development and a keen eye for innovative solutions.
 					Graduating with distinction from Pandit Deendayal Energy University,
