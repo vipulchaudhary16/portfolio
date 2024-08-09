@@ -1,5 +1,5 @@
 import { Flex, Typography } from 'antd';
-import { portfolioData } from '../assets/projects';
+import { portfolioData } from '../data/projects';
 import { LinkOutlined, GithubOutlined } from '@ant-design/icons';
 
 const { Title } = Typography;
