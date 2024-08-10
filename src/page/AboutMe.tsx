@@ -1,14 +1,14 @@
 import React from 'react';
 import { Button } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
-import me from '../assets/images/me-2.png';
+import me from '../assets/images/me-3.png';
 import { links } from '../data/data';
 
 const AboutMe: React.FC = () => {
 	return (
 		<>
-			<div className='flex flex-col items-center justify-center h-screen '>
-				<p className={`text-center text-xl mb-6 mx-4 max-w-2xl`}>
+			<div className='flex flex-col items-center justify-center h-screen z-10'>
+				<p className={`text-center lg:text-xl mb-6 mx-4 max-w-2xl `}>
 					"Vipul is a passionate software developer with a strong foundation in
 					full-stack development and a keen eye for innovative solutions.
 					Graduating with distinction from Pandit Deendayal Energy University,
@@ -16,7 +16,7 @@ const AboutMe: React.FC = () => {
 					Flutter. His experience includes developing robust applications and
 					enhancing user experience in agile environments. With a proven track
 					record in hackathons and a commitment to continuous learning, he
-					thrives on building impactful, customer-centric solutions.""
+					thrives on building impactful, customer-centric solutions."
 				</p>
 				<Button
 					type='primary'
@@ -30,7 +30,7 @@ const AboutMe: React.FC = () => {
 			<img
 				src={me}
 				alt='Vipul Chaudhary'
-				style={{ position: 'absolute', bottom: 0, right: 20, height: '70%' }}
+				className='absolute bottom-0 lg:right-20 right-0 lg:h-3/4 h-1/3 z-0'
 			/>
 		</>
 	);

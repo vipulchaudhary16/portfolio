@@ -6,7 +6,7 @@ const { Title } = Typography;
 
 const Portfolio = () => {
 	return (
-		<Flex className='md:p-4 lg:p-8' vertical justify='center' align='center'>
+		<Flex className='lg:p-8 p-4' vertical justify='center' align='center'>
 			<Title level={2} className='heading-text'>
 				Projects
 			</Title>
@@ -24,7 +24,7 @@ const Portfolio = () => {
 						<div className='p-6'>
 							<h3 className='text-xl font-semibold mb-2'>{project.title}</h3>
 							<p className='text-gray-700 mb-4'>{project.desc}</p>
-							<div className='flex space-x-4'>
+							<div className='flex gap-2 flex-wrap'>
 								{project.live_link && (
 									<a
 										href={project.live_link}
