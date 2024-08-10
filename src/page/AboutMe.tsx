@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
 import me from '../assets/images/me-2.png';
-import { links } from '../assets/data';
+import { links } from '../data/data';
 
 const AboutMe: React.FC = () => {
 	return (

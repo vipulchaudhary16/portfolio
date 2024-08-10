@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
-import { links } from '../assets/data';
+import { links } from '../data/data';
 import { BG_DARK_COLOR } from '../setup/variables';
 import { BsGithub, BsLinkedin, BsTwitterX } from 'react-icons/bs';
 import { FaCode } from 'react-icons/fa';

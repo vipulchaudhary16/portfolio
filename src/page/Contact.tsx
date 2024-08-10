@@ -2,7 +2,7 @@ import React from 'react';
 import { AiFillInstagram, AiFillMail } from 'react-icons/ai';
 import { FaLinkedin } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
-import { links } from '../assets/data';
+import { links } from '../data/data';
 
 const socials = [
 	{

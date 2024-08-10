@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Flex } from 'antd';
 import { EnvironmentOutlined } from '@ant-design/icons';
-import { experiences } from '../assets/data';
+import { experiences } from '../data/data';
 
 const { Title } = Typography;
 
