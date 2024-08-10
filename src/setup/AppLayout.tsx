@@ -7,8 +7,10 @@ import Portfolio from '../page/Portfolio';
 import Skills from '../page/Skills';
 import { PRIMARY_COLOR } from './variables';
 import ContactMe from '../page/Contact';
+import { useTheme } from '../context/theme.context';
 
 const AppLayout = () => {
+	const { collapsible } = useTheme();
 	return (
 		<ConfigProvider
 			theme={{
@@ -18,7 +20,11 @@ const AppLayout = () => {
 			}}
 		>
 			<Sidebar />
-			<div className='ml-64 flex-1 overflow-auto bg-gray-100 overflow-x-hidden min-h-screen'>
+			<div
+				className={`${
+					collapsible ? 'ml-[80px]' : 'ml-64'
+				} flex-1 overflow-auto bg-gray-100 overflow-x-hidden min-h-screen`}
+			>
 				<Routes>
 					<Route path='/' element={<AboutMe />} />
 					<Route path='/experience' element={<Experience />} />

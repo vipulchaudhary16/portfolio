@@ -11,8 +11,21 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.heading-text{
+.heading-text {
   color: #F88585 !important;
   text-align: center;
   padding-bottom: 18px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #F88585;
+  margin-bottom: 20px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .heading-text {
+    font-size: 1.5rem !important;
+  }
 }

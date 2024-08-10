@@ -4,7 +4,7 @@ export const links: Record<string, string> = {
   twitter: 'https://twitter.com/FullStackVipul',
   instagram: 'https://instagram.com/vipulchaudhary.jsx',
   mail: 'vipulr6111@gmail.com',
-  resume: ''
+  resume: 'https://drive.google.com/file/d/1p4qNWB7LlHGgaAjg9BoFLx5MzgB6moFK/view?usp=sharing'
 }
 
 export const experiences = [
